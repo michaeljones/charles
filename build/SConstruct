@@ -1,0 +1,21 @@
+
+env = Environment()
+
+sources = Split("""
+            ../src/Sphere.cpp
+            ../src/Engine.cpp
+            ../src/PointLight.cpp
+            ../src/main.cpp
+            """)
+
+# object_list = env.Object( source = sources )
+
+env.AppendUnique( LIBPATH=["/home/mike/projects/tools/lib", "/usr/lib"] )
+
+env.AppendUnique( LIBS = ["-lstdc++", "-lImath"] )
+
+env.AppendUnique( CPPPATH = ["/home/mike/projects/tools/include/OpenEXR", "../src"] )
+
+env.Program( target = 'charles', source = sources )
+
+
