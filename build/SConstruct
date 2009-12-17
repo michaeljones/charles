@@ -2,9 +2,20 @@
 env = Environment()
 
 sources = Split("""
+            ../src/Object.cpp
             ../src/Sphere.cpp
             ../src/Engine.cpp
             ../src/PointLight.cpp
+            ../src/ImagePlane.cpp
+            ../src/View.cpp
+            ../src/World.cpp
+            ../src/Intersection.cpp
+            ../src/IntersectionFactory.cpp
+            ../src/SphereIntersection.cpp
+            ../src/ObjectIntersection.cpp
+            ../src/ClippingPlane.cpp
+            ../src/ClippingPlaneIntersection.cpp
+            ../src/Output.cpp
             ../src/main.cpp
             """)
 

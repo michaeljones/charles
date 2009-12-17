@@ -14,6 +14,18 @@ To create a basic ray tracer in C++ with a modular testable code.
 Design
 ------
 
+The tracing will take place in the Engine class. The Engine class will have a
+World object and a View object.
+
+The World will contain the scene graph. The Engine will ask the World for
+intersections.
+
+The View contains all the information about the camera and the image. It defines
+the view point and position and resolution of the image plane in the scene.
+
+
+
+
 Classes
 ~~~~~~~
 
@@ -30,7 +42,9 @@ Classes
 * Ray - potentially little more than a glorified vector, holds information about
   the ray we're processing.
 
-* Tracer - Over sees the ray tracing
+* Engine - Over sees the ray tracing
+
+
 
 Dependencies
 ------------

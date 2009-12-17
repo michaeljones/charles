@@ -8,7 +8,7 @@ class Engine
 {
 public:
 
-	Engine( const View& view, const World& world )
+	Engine( View& view, const World& world )
 	 :	m_world( world ),
 		m_view( view)
 	{};
@@ -18,7 +18,7 @@ public:
 private:
 
 	const World& m_world;
-	const View& m_view;
+	View& m_view;
 
 };
 

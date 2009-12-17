@@ -1,23 +1,35 @@
 #ifndef __CHARLES_WORLD_H__
 #define __CHARLES_WORLD_H__
 
-#include "Sphere.h"
+#include "Object.h"
 #include "PointLight.h"
+#include "IntersectionFactory.h"
+#include "Ray.h"
+
+#include <vector>
+
+
 
 class World 
 {
 public:
 
-	World() {};
+	World( const IntersectionFactory& intersectionFactory );
 
-	void addObject( const Sphere& object ) {};
+	void addObject( const Object& object );
 	void addLight( const PointLight& light ) {};
 
-private:
-
-	World( const World& world ) {};
+	Intersection& intersect( const Ray& ray ) const;
 
 private:
+
+	World( const World& world );
+
+private:
+
+	ConstObjectPtrList m_objects;
+
+	const IntersectionFactory& m_intersectionFactory;
 
 };
 

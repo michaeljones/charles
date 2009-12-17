@@ -1,18 +1,25 @@
 #ifndef __CHARLES_SPHERE_H__
 #define __CHARLES_SPHERE_H__
 
+#include "Object.h"
+
+#include "Intersection.h"
+#include "Ray.h"
+
 #include <ImathVec.h>
 
-class Sphere 
+class Sphere : public Object
 {
 public:
 
 	Sphere( float radius, Imath::V3f centre );
+	Sphere( const Sphere& sphere );
+
+	IntersectionPtrList intersect( const Ray& ray ) const;
 
 private:
 
 	Sphere() {};
-	Sphere( const Sphere& sphere ) {};
 
 private:
 

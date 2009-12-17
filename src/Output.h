@@ -7,15 +7,15 @@ class Output
 {
 public:
 
-	Output( const Engine& engine )
-	 :	m_engine( engine )
+	Output( const ImagePlane& imagePlane )
+	 :	m_imagePlane( imagePlane )
 	{};
 
-	void write() {};
+	void write();
 
 private:
 
-	const Engine& m_engine;
+	const ImagePlane& m_imagePlane;
 
 };
 
