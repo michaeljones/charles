@@ -36,7 +36,7 @@ int main( int argc, char** argv )
 	float height = 2.0;
 	float width = 3.0;
 
-	Imath::V2i resolution( 200, 300 );
+	Imath::V2i resolution( 300, 200 );
 	ImagePlane imagePlane( centre, x, y, height, width, resolution );
 
 	View view( camera, imagePlane );

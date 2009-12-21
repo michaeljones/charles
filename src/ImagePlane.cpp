@@ -40,8 +40,8 @@ Imath::Color3< float > ImagePlane::getColor( Coordinate coord ) const
 Imath::V3f ImagePlane::worldSpace( const Imath::V2i& coordinate ) const
 {
 	Imath::V3f pos( m_position );
-	pos += ( float( coordinate.x ) / m_resolution.x ) * m_width * m_x;
-	pos += ( float( coordinate.y ) / m_resolution.y ) * m_height * m_y;
+	pos += ( ( float( coordinate.x ) / m_resolution.x ) - 0.5f ) * m_width * m_x;
+	pos += ( ( float( coordinate.y ) / m_resolution.y ) - 0.5f ) * m_height * m_y;
 
 	return pos;
 }
