@@ -23,7 +23,7 @@ sources = Split("""
 
 env.AppendUnique( LIBPATH=["/home/mike/projects/tools/lib", "/usr/lib"] )
 
-env.AppendUnique( LIBS = ["-lstdc++", "-lImath"] )
+env.AppendUnique( LIBS = ["-lstdc++", "-lImath", "-lIlmImf", "-lpthread"] )
 
 env.AppendUnique( CPPPATH = ["/home/mike/projects/tools/include/OpenEXR", "../src"] )
 
