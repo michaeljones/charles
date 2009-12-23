@@ -17,6 +17,8 @@ public:
 
 	IntersectionPtrList intersect( const Ray& ray ) const;
 
+	const Imath::V3f& centre() const { return m_centre; };
+
 private:
 
 	Sphere();

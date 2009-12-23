@@ -18,6 +18,7 @@ sources = Split("""
             ../src/Output.cpp
             ../src/Material.cpp
             ../src/ConstantMaterial.cpp
+            ../src/NormalMaterial.cpp
             ../src/main.cpp
             """)
 

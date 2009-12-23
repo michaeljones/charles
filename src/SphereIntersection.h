@@ -13,6 +13,8 @@ public:
 
 	SphereIntersection( const Sphere& sphere, const Ray& ray, float distance );
 
+	virtual Imath::V3f normal() const;
+
 private:
 
 	SphereIntersection( const SphereIntersection& intersection );

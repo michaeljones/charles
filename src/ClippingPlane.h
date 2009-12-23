@@ -17,6 +17,8 @@ public:
 
 	IntersectionPtrList intersect( const Ray& ray ) const;
 
+	const Imath::V3f& normal() const { return m_normal; };
+
 private:
 
 	ClippingPlane();

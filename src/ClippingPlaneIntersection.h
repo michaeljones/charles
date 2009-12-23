@@ -13,6 +13,8 @@ public:
 
 	ClippingPlaneIntersection( const ClippingPlane& clippingPlane, const Ray& ray, float distance );
 
+	virtual Imath::V3f normal() const;
+
 private:
 
 	ClippingPlaneIntersection( const ClippingPlaneIntersection& intersection );

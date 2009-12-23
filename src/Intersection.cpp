@@ -15,3 +15,4 @@ Intersection::Intersection( const Intersection& intersection )
 	
 }
 
+

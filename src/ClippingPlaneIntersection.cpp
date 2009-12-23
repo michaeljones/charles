@@ -7,4 +7,9 @@ ClippingPlaneIntersection::ClippingPlaneIntersection( const ClippingPlane& clipp
 
 }
 
+Imath::V3f ClippingPlaneIntersection::normal() const
+{
+	return m_clippingPlane.normal();
+}
+
 

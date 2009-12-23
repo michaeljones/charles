@@ -6,6 +6,7 @@
 #include "Output.h"
 #include "View.h"
 #include "ConstantMaterial.h"
+#include "NormalMaterial.h"
 
 #include <ImathVec.h>
 
@@ -17,8 +18,10 @@ int main( int argc, char** argv )
 	Imath::Color4f blue( 0.0, 0.0, 1.0, 1.0 );
 	ConstantMaterial blueMaterial( blue );
 
+	NormalMaterial normalMaterial;
+
 	Imath::V3f sphereCentre( 0.0, 0.0, 10.0 );
-	Sphere sphere( 2.0, sphereCentre, blueMaterial );
+	Sphere sphere( 2.0, sphereCentre, normalMaterial );
 	world.addObject( sphere );
 
 	Imath::Color4f green( 0.0, 1.0, 0.0, 0.5 );

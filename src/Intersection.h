@@ -16,6 +16,8 @@ public:
 
 	float distance() const { return m_distance; };
 
+	virtual Imath::V3f normal() const = 0;
+
 	virtual Imath::Color4< float > getColor() const = 0;
 
 public:
@@ -25,11 +27,10 @@ public:
 		bool operator()( Intersection* a, Intersection* b ) { return a->distance() < b->distance(); }
 	};
 
-private:
+protected:
 
 	float m_distance;
 	const Ray& m_ray;
-
 };
 
 
