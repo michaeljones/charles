@@ -1,6 +1,7 @@
 #ifndef __CHARLES_OBJECT_H__
 #define __CHARLES_OBJECT_H__
 
+#include "Material.h"
 #include "Intersection.h"
 #include "Ray.h"
 
@@ -10,15 +11,19 @@ class Object
 {
 public:
 
-	Object() {};
+	Object( Material& material );
 
 	virtual IntersectionPtrList intersect( const Ray& ray ) const = 0;
 
+	virtual Imath::Color4f shade( const Intersection* intersection ) const;
+
+protected:
+
+	Object( const Object& obj );
+
 private:
 
-	Object( const Object& obj ) {};
-
-private:
+	const Material& m_material;
 
 };
 

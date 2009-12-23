@@ -1,19 +1,24 @@
 #include "ObjectIntersection.h"
 
+#include "Object.h"
+
 ObjectIntersection::ObjectIntersection( const Object& object, const Ray& ray, float distance )
- :	Intersection( distance ),
-	m_object( object ),
-	m_ray( ray )
+ :	Intersection( ray, distance ),
+	m_object( object )
 {
 	
 }
 
 ObjectIntersection::ObjectIntersection( const ObjectIntersection& intersection )
- :	Intersection( intersection.distance() ),
-	m_object( intersection.m_object ),
-	m_ray( intersection.m_ray )
+ :	Intersection( intersection ),
+	m_object( intersection.m_object )
 {
 
 }
 
+
+Imath::Color4f ObjectIntersection::getColor() const
+{
+	return m_object.shade( this );
+}
 

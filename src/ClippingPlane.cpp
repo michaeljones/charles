@@ -3,8 +3,8 @@
 #include "ClippingPlaneIntersection.h"
 
 
-ClippingPlane::ClippingPlane( Imath::V3f position, Imath::V3f normal )
- :	Object(),
+ClippingPlane::ClippingPlane( Imath::V3f position, Imath::V3f normal, Material& material )
+ :	Object( material ),
 	m_position( position ),
 	m_normal( normal )
 {
@@ -12,7 +12,7 @@ ClippingPlane::ClippingPlane( Imath::V3f position, Imath::V3f normal )
 }
 
 ClippingPlane::ClippingPlane( const ClippingPlane& clippingPlane )
- :	Object(),
+ :	Object( clippingPlane ),
 	m_position( clippingPlane.m_position ),
 	m_normal( clippingPlane.m_normal )
 {

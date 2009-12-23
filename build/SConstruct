@@ -16,6 +16,8 @@ sources = Split("""
             ../src/ClippingPlane.cpp
             ../src/ClippingPlaneIntersection.cpp
             ../src/Output.cpp
+            ../src/Material.cpp
+            ../src/ConstantMaterial.cpp
             ../src/main.cpp
             """)
 

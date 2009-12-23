@@ -28,7 +28,7 @@ public:
 
 		Ray ray() const;
 
-		void setColor( const Imath::Color3f& color );
+		void setColor( const Imath::Color4f& color );
 
 		iterator& operator++();
 		bool operator==( const iterator& it );

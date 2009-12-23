@@ -19,7 +19,7 @@ public:
 	void addObject( const Object& object );
 	void addLight( const PointLight& light ) {};
 
-	Intersection& intersect( const Ray& ray ) const;
+	IntersectionPtrList intersect( const Ray& ray ) const;
 
 private:
 

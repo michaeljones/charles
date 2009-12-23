@@ -11,12 +11,12 @@ class Intersection
 {
 public:
 
-	Intersection( const float distance );
-	Intersection( const Intersection& intersection ) {};
+	Intersection( const Ray& ray, const float distance );
+	Intersection( const Intersection& intersection );
 
 	float distance() const { return m_distance; };
 
-	virtual Imath::Color3< float > getColor() const = 0;
+	virtual Imath::Color4< float > getColor() const = 0;
 
 public:
 
@@ -28,6 +28,8 @@ public:
 private:
 
 	float m_distance;
+	const Ray& m_ray;
+
 };
 
 

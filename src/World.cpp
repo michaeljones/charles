@@ -13,7 +13,7 @@ void World::addObject( const Object& object )
 }
 
 
-Intersection& World::intersect( const Ray& ray ) const
+IntersectionPtrList World::intersect( const Ray& ray ) const
 {
 	ConstObjectPtrList::const_iterator it = m_objects.begin();
 	ConstObjectPtrList::const_iterator end = m_objects.end();
@@ -39,7 +39,7 @@ Intersection& World::intersect( const Ray& ray ) const
 	intersections.sort( Intersection::PtrCompare() );
 
 	//	Return first intersection
-	return *(*(intersections.begin()));
+	return intersections;
 }
 
 

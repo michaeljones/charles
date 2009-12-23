@@ -5,6 +5,7 @@
 #include "PointLight.h"
 #include "Output.h"
 #include "View.h"
+#include "ConstantMaterial.h"
 
 #include <ImathVec.h>
 
@@ -13,13 +14,26 @@ int main( int argc, char** argv )
 	IntersectionFactory intersectionFactory;
 	World world( intersectionFactory );
 
+	Imath::Color4f blue( 0.0, 0.0, 1.0, 1.0 );
+	ConstantMaterial blueMaterial( blue );
+
 	Imath::V3f sphereCentre( 0.0, 0.0, 10.0 );
-	Sphere sphere( 2.0, sphereCentre );
+	Sphere sphere( 2.0, sphereCentre, blueMaterial );
 	world.addObject( sphere );
+
+	Imath::Color4f green( 0.0, 1.0, 0.0, 0.5 );
+	ConstantMaterial greenMaterial( green );
+
+	Imath::V3f sphereCentre2( 5.0, 0.0, 15.0 );
+	Sphere sphere2( 2.0, sphereCentre2, greenMaterial );
+	world.addObject( sphere2 );
+
+	Imath::Color4f red( 1.0, 0.0, 0.0, 1.0 );
+	ConstantMaterial redMaterial( red );
 
 	Imath::V3f planePos( 0.0, 0.0, 20.0 );
 	Imath::V3f planeNormal( 0.0, 0.0, 1.0 );
-	ClippingPlane plane( planePos, planeNormal );
+	ClippingPlane plane( planePos, planeNormal, redMaterial );
 	world.addObject( plane );
 
 	Imath::V3f lightLocation( 5.0, 5.0, 5.0 );

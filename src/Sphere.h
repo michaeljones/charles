@@ -12,14 +12,14 @@ class Sphere : public Object
 {
 public:
 
-	Sphere( float radius, Imath::V3f centre );
+	Sphere( float radius, Imath::V3f centre, Material& material );
 	Sphere( const Sphere& sphere );
 
 	IntersectionPtrList intersect( const Ray& ray ) const;
 
 private:
 
-	Sphere() {};
+	Sphere();
 
 private:
 

@@ -15,13 +15,11 @@ public:
 	ObjectIntersection( const Object& object, const Ray& ray, float distance );
 	ObjectIntersection( const ObjectIntersection& intersection );
 
-	virtual Imath::Color3< float > getColor() const = 0;
+	virtual Imath::Color4< float > getColor() const;
 
 private:
 
 	const Object& m_object;
-	const Ray& m_ray;
-
 };
 
 #endif

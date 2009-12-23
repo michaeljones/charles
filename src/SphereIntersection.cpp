@@ -7,9 +7,3 @@ SphereIntersection::SphereIntersection( const Sphere& sphere, const Ray& ray, fl
 
 }
 
-
-Imath::Color3< float > SphereIntersection::getColor() const
-{
-	return Imath::Color3< float >( 1.0, 0.0, 0.0 );
-}
-

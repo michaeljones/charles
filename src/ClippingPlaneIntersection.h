@@ -13,8 +13,6 @@ public:
 
 	ClippingPlaneIntersection( const ClippingPlane& clippingPlane, const Ray& ray, float distance );
 
-	Imath::Color3< float > getColor() const;
-
 private:
 
 	ClippingPlaneIntersection( const ClippingPlaneIntersection& intersection );

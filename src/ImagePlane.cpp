@@ -16,7 +16,7 @@ ImagePlane::ImagePlane(
 	m_resolution( resolution ),
 	m_imageData( 0 )
 {
-	m_imageData = new Imath::Color3f[ resolution.x * resolution.y ];
+	m_imageData = new Imath::Color4f[ resolution.x * resolution.y ];
 };
 
 
@@ -26,12 +26,12 @@ ImagePlane::~ImagePlane()
 }
 
 
-void ImagePlane::setColor( Coordinate coord, Imath::Color3< float > color )
+void ImagePlane::setColor( Coordinate coord, Imath::Color4< float > color )
 {
 	m_imageData[ coord.y * m_resolution.x + coord.x ] = color;
 }
 
-Imath::Color3< float > ImagePlane::getColor( Coordinate coord ) const
+Imath::Color4< float > ImagePlane::getColor( Coordinate coord ) const
 {
 	return m_imageData[ coord.y * m_resolution.x + coord.x ];
 }

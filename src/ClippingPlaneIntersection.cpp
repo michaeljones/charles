@@ -7,8 +7,4 @@ ClippingPlaneIntersection::ClippingPlaneIntersection( const ClippingPlane& clipp
 
 }
 
-Imath::Color3< float > ClippingPlaneIntersection::getColor() const
-{
-	return Imath::Color3< float >( 0.0, 0.0, 1.0 );
-}
 

@@ -13,8 +13,6 @@ public:
 
 	SphereIntersection( const Sphere& sphere, const Ray& ray, float distance );
 
-	Imath::Color3< float > getColor() const;
-
 private:
 
 	SphereIntersection( const SphereIntersection& intersection );

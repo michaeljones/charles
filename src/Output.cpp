@@ -14,12 +14,12 @@ void Output::write()
 	{
 		for ( int j=0; j<resolution.y; ++j )
 		{
-			Imath::Color3f color = m_imagePlane.getColor( Coordinate( i, j ) );
+			Imath::Color4f color = m_imagePlane.getColor( Coordinate( i, j ) );
 			Imf::Rgba& pixel = pixels[ j * resolution.x + i ];
 
-			pixel.r = color.x;
-			pixel.g = color.y;
-			pixel.b = color.z;
+			pixel.r = color.r;
+			pixel.g = color.g;
+			pixel.b = color.b;
 			pixel.a = 1.0;
 		}
 	}

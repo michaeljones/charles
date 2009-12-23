@@ -34,7 +34,7 @@ View::iterator::iterator( const iterator& it )
 {
 }
 
-void View::iterator::setColor( const Imath::Color3f& color )
+void View::iterator::setColor( const Imath::Color4f& color )
 {
 	m_imagePlane.setColor( m_coordinate, color );
 }

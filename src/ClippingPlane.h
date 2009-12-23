@@ -12,14 +12,14 @@ class ClippingPlane : public Object
 {
 public:
 
-	ClippingPlane( Imath::V3f position, Imath::V3f normal );
+	ClippingPlane( Imath::V3f position, Imath::V3f normal, Material& material );
 	ClippingPlane( const ClippingPlane& clippingPlane );
 
 	IntersectionPtrList intersect( const Ray& ray ) const;
 
 private:
 
-	ClippingPlane() {};
+	ClippingPlane();
 
 private:
 

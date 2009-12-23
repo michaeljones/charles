@@ -24,8 +24,8 @@ public:
 
 	Imath::V3f worldSpace( const Imath::V2i& coordinate ) const;
 
-	void setColor( Coordinate coord, Imath::Color3< float > color );
-	Imath::Color3< float > getColor( Coordinate coord ) const;
+	void setColor( Coordinate coord, Imath::Color4< float > color );
+	Imath::Color4< float > getColor( Coordinate coord ) const;
 
 private:
 
@@ -41,7 +41,7 @@ private:
 	float m_width;
 	Imath::V2i m_resolution;
 
-	Imath::Color3< float >* m_imageData;
+	Imath::Color4< float >* m_imageData;
 
 };
 

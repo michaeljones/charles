@@ -3,8 +3,8 @@
 #include "SphereIntersection.h"
 
 
-Sphere::Sphere( float radius, Imath::V3f centre )
- :	Object(),
+Sphere::Sphere( float radius, Imath::V3f centre, Material& material )
+ :	Object( material ),
 	m_radius( radius ),
 	m_centre( centre )
 {
@@ -12,7 +12,7 @@ Sphere::Sphere( float radius, Imath::V3f centre )
 }
 
 Sphere::Sphere( const Sphere& sphere )
- :	Object(),
+ :	Object( sphere ),
 	m_radius( sphere.m_radius ),
 	m_centre( sphere.m_centre )
 {
@@ -52,4 +52,5 @@ IntersectionPtrList Sphere::intersect( const Ray& ray ) const
 	
 	return intersections;
 }
+
 
