@@ -3,7 +3,7 @@
 
 #include "ObjectIntersection.h"
 #include "Ray.h"
-#include "Sphere.h"
+#include "objects/Sphere.h"
 
 #include <ImathColor.h>
 

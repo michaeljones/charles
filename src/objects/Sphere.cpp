@@ -1,6 +1,6 @@
 #include "Sphere.h"
 
-#include "SphereIntersection.h"
+#include "intersections/SphereIntersection.h"
 
 
 Sphere::Sphere( float radius, Imath::V3f centre, Material& material )

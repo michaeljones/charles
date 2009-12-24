@@ -1,6 +1,6 @@
 #include "ClippingPlane.h"
 
-#include "ClippingPlaneIntersection.h"
+#include "intersections/ClippingPlaneIntersection.h"
 
 
 ClippingPlane::ClippingPlane( Imath::V3f position, Imath::V3f normal, Material& material )

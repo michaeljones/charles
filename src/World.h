@@ -1,9 +1,9 @@
 #ifndef __CHARLES_WORLD_H__
 #define __CHARLES_WORLD_H__
 
-#include "Object.h"
-#include "PointLight.h"
-#include "IntersectionFactory.h"
+#include "objects/Object.h"
+#include "lights/PointLight.h"
+#include "intersections/IntersectionFactory.h"
 #include "Ray.h"
 
 #include <vector>

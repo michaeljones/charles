@@ -1,6 +1,6 @@
 #include "Object.h"
 
-#include "Material.h"
+#include "materials/Material.h"
 
 Object::Object( Material& material )
  :	m_material( material )

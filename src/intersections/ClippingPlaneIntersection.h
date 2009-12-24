@@ -2,8 +2,8 @@
 #define __CHARLES_CLIPPINGPLANEINTERSECTION_H__
 
 #include "ObjectIntersection.h"
+#include "objects/ClippingPlane.h"
 #include "Ray.h"
-#include "ClippingPlane.h"
 
 #include <ImathColor.h>
 

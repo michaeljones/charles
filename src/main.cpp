@@ -1,12 +1,12 @@
+#include "objects/Sphere.h"
+#include "objects/ClippingPlane.h"
+#include "lights/PointLight.h"
+#include "materials/ConstantMaterial.h"
+#include "materials/NormalMaterial.h"
+#include "outputs/Output.h"
 #include "Engine.h"
 #include "World.h"
-#include "Sphere.h"
-#include "ClippingPlane.h"
-#include "PointLight.h"
-#include "Output.h"
 #include "View.h"
-#include "ConstantMaterial.h"
-#include "NormalMaterial.h"
 
 #include <ImathVec.h>
 
@@ -15,19 +15,19 @@ int main( int argc, char** argv )
 	IntersectionFactory intersectionFactory;
 	World world( intersectionFactory );
 
-	Imath::Color4f blue( 0.0, 0.0, 1.0, 1.0 );
+	Imath::Color4f blue( 0.0, 0.0, 1.0, 0.5 );
 	ConstantMaterial blueMaterial( blue );
 
 	NormalMaterial normalMaterial;
 
 	Imath::V3f sphereCentre( 0.0, 0.0, 10.0 );
-	Sphere sphere( 2.0, sphereCentre, normalMaterial );
+	Sphere sphere( 2.0, sphereCentre, blueMaterial );
 	world.addObject( sphere );
 
-	Imath::Color4f green( 0.0, 1.0, 0.0, 0.5 );
+	Imath::Color4f green( 0.0, 1.0, 0.0, 1.0 );
 	ConstantMaterial greenMaterial( green );
 
-	Imath::V3f sphereCentre2( 5.0, 0.0, 15.0 );
+	Imath::V3f sphereCentre2( 3.0, 0.0, 15.0 );
 	Sphere sphere2( 2.0, sphereCentre2, greenMaterial );
 	world.addObject( sphere2 );
 

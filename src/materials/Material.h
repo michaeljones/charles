@@ -1,7 +1,7 @@
 #ifndef __CHARLES_MATERIAL_H__
 #define __CHARLES_MATERIAL_H__
 
-#include "Intersection.h"
+#include "intersections/Intersection.h"
 
 #include "ImathColor.h"
 

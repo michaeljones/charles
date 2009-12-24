@@ -1,6 +1,6 @@
 #include "IntersectionFactory.h"
 
-#include "Object.h"
+#include "objects/Object.h"
 
 IntersectionPtrList IntersectionFactory::create( const Object& object, const Ray& ray ) const
 {

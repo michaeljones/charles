@@ -3,7 +3,7 @@
 
 #include "Object.h"
 
-#include "Intersection.h"
+#include "intersections/Intersection.h"
 #include "Ray.h"
 
 #include <ImathVec.h>

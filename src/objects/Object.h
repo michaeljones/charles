@@ -1,8 +1,8 @@
 #ifndef __CHARLES_OBJECT_H__
 #define __CHARLES_OBJECT_H__
 
-#include "Material.h"
-#include "Intersection.h"
+#include "materials/Material.h"
+#include "intersections/Intersection.h"
 #include "Ray.h"
 
 #include <ImathVec.h>

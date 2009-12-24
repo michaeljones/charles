@@ -1,6 +1,6 @@
 #include "NormalMaterial.h"
 
-#include "Intersection.h"
+#include "intersections/Intersection.h"
 
 Imath::Color4f NormalMaterial::evaluate( const Intersection* intersection ) const
 {

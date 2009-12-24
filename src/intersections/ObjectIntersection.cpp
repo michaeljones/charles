@@ -1,6 +1,6 @@
 #include "ObjectIntersection.h"
 
-#include "Object.h"
+#include "objects/Object.h"
 
 ObjectIntersection::ObjectIntersection( const Object& object, const Ray& ray, float distance )
  :	Intersection( ray, distance ),
