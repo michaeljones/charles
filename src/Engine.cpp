@@ -12,7 +12,8 @@ void Engine::trace()
 		// Ask world for first intersect
 		const IntersectionPtrList intersectionList = m_world.intersect( it.ray() );
 
-		Imath::Color4f pixelColor(0.0f, 0.0f, 0.0f, 0.0f);
+		Imath::Color3f pixelColor(0.0f, 0.0f, 0.0f);
+		float pixelOpacity = 0.0f;
 
 		IntersectionPtrList::const_iterator intersection = intersectionList.begin();
 		IntersectionPtrList::const_iterator endIntersection = intersectionList.end();
@@ -21,13 +22,17 @@ void Engine::trace()
 		{
 			Imath::Color4f color = (*intersection)->getColor();
 
-			pixelColor += color;
+			pixelColor.x = pixelOpacity * pixelColor.x + (1.0f - pixelOpacity) * color.r;
+			pixelColor.y = pixelOpacity * pixelColor.y + (1.0f - pixelOpacity) * color.g;
+			pixelColor.z = pixelOpacity * pixelColor.z + (1.0f - pixelOpacity) * color.b;
 
-			if ( color.a >= 1.0f )
+			pixelOpacity += (1.0f - pixelOpacity) * color.a; 
+
+			if ( pixelOpacity >= 1.0f )
 				break;
 		}
 
-		it.setColor( pixelColor );
+		it.setColor( Imath::Color4f( pixelColor.x, pixelColor.y, pixelColor.z, pixelOpacity ) );
 	}
 
 	std::cerr << "mpj-debug: Done trace" << std::endl;
