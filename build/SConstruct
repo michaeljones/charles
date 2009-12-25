@@ -30,6 +30,8 @@ env.AppendUnique( LIBS = ["-lstdc++", "-lImath", "-lIlmImf", "-lpthread"] )
 
 env.AppendUnique( CPPPATH = ["/home/mike/projects/tools/include/OpenEXR", "../src"] )
 
+env.AppendUnique( CPPFLAGS = ["-Wall"] )
+
 env.Program( target = 'charles', source = sources )
 
 
